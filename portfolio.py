@@ -15,13 +15,6 @@ def html_page(page_name):
 #need to make html pages for each project and update the
 #names by adding .html in index.html
 
-def write_to_file(data):
-    with open('webserver/Portfoliowebpage/database.txt', mode='a') as database:
-        name = data['name']
-        email = data['email']
-        message = data['message']
-        file = database.write(f'\n{name}, {email}, {message}')
-
 def write_to_csv(data):
     with open('webserver/Portfoliowebpage/database.csv', mode='a', newline='') as database2:
         name = data['name']
