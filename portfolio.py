@@ -16,7 +16,7 @@ def html_page(page_name):
 #names by adding .html in index.html
 
 def write_to_csv(data):
-    with open('webserver/Portfoliowebpage/database.csv', mode='a', newline='') as database:
+    with open('Portfoliowebpage/database.csv', mode='a', newline='') as database:
         name = data['name']
         email = data['email']
         message = data['message']
