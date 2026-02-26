@@ -16,11 +16,11 @@ def html_page(page_name):
 #names by adding .html in index.html
 
 def write_to_csv(data):
-    with open('webserver/Portfoliowebpage/database.csv', mode='a', newline='') as database2:
+    with open('webserver/Portfoliowebpage/database.csv', mode='a', newline='') as database:
         name = data['name']
         email = data['email']
         message = data['message']
-        csv_writer = csv.writer(database2, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        csv_writer = csv.writer(database, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         csv_writer.writerow([name,email,message])
 
 @app.route('/submitform', methods=['POST', 'GET'])
